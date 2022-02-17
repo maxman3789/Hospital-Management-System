@@ -1,0 +1,15 @@
+<h1>Caretrol</h1>
+<h1>Patient Information</h1>
+  <h2>Welcome, {{patient.first_name}} {{patient.last_name}}</h2>
+  <p><strong>Your ID:</strong> <strong>{{patient.id}}</strong></p>
+  <p><strong>Next Scheduled Visit:</strong> {{formatVisitDate patient.next_scheduled_visit}}</p>
+  <p><strong>Medicine:</strong> {{patient.medicine}}</p>
+  <p><strong>Description:</strong> {{patient.description}}</p>
+  <p><strong>Treatment Details:</strong> {{patient.treatment_details}}</p>
+  <p><strong>Insurance:</strong> {{patient.insurance}}</p>
+  <p><strong>Amount Owed:</strong> {{patient.amount_owed}}</p>
+  <p><strong>Current Address:</strong> {{patient.address}}, {{patient.city}}, {{patient.state}}, {{patient.zip}}, {{patient.country}}</p>
+{{#unless logged_in}}
+  <br />
+{{/unless}}
+<a class='btn' href='/patient/update'>Update</a>

@@ -1,0 +1,68 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>CareTrol - {{title}}</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1><a href="/">CareTrol</a></h1>
+    <nav>
+      <a href='/'>Home</a>
+      {{#if logged_in}}
+        <button id='logout' class='btn btn-logout logout'>Log Out</button>
+        <a href='/patient/info'>Your Patient Data</a>
+      {{else}}
+        
+        <a href='/patient/login'>Log In</a>
+        <a href='/patient/signup'>Sign Up</a>
+      {{/if}}
+    </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+    {{{body}}}
+    </main>
+<footer class="container container-fluid mt-5 pt-3">
+      <div class="row">
+      <div class="col-lg-4"><h4>Contact Us</h4>
+	<p style="font-size: large;">Send us an <a href="sendmaxstuff@gmail.com">E-Mail</a> if you have any questions or any feedback.</p>
+
+	</div>
+
+      <div class="col-lg-4"><h4>Important Information</h4>
+	<ul style="font-size: large;">
+
+                <li><a href="https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/testing.html" target="_blank">San Diego County - Testing</a></li>
+                <li><a href="https://www.cdc.gov" target="_blank">CDC</a></li>
+                <li><a href="https://www.fda.gov/emergency-preparedness-and-response/coronavirus-disease-2019-covid-19/covid-19-vaccines" target="_blank">FDA - Vaccines</a></li>
+                <li><a href="https://www.vaccines.gov" target="_blank">Vaccine Finder</a>
+                <li><a href="https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/Treatment.html" target="_blank">Treatments</a></li>
+            </ul>
+
+	</div>
+
+      <div class="col-lg-4"><h4>Brought to you by <strong><i>The Git Crowd</i></strong></h4>
+<p style="text-align: center;"><br><img width="40%" src="https://cdn-icons-png.flaticon.com/512/476/476863.png" /> </p>
+
+	</div>
+<div class="col-lg-12 text-center">Copyright 2022, The Git Crowd</div>
+
+      </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    {{!-- <script src='/js/main.js'></script> --}}
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+
+  </body>
+</html>

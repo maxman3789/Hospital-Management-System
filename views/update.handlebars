@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{patient.first_name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Update your info:</h3>
+
+    <form class="form update-form">
+      <div class="form-group">
+        <label for="first_name">first name:</label>
+        <input value="{{patient.first_name}}" class="form-input" type="text" id="first_name" name="first_name" />
+      </div>
+      <div class="form-group">
+        <label for="last_name">last name:</label>
+        <input value="{{patient.last_name}}" class="form-input" type="text" id="last_name" name="last_name" />
+      </div>
+      <div class="form-group">
+        <label for="address">address:</label>
+        <input value="{{patient.address}}" class="form-input" id="address" name="address"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="city">city:</label>
+        <input value="{{patient.city}}" class="form-input" id="city" name="city"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="state">state:</label>
+        <input value="{{patient.state}}" class="form-input" id="state" name="state"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="zip">zip:</label>
+        <input value="{{patient.zip}}" class="form-input" id="zip" name="zip"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="country">country:</label>
+        <input value="{{patient.country}}" class="form-input" id="country" name="country"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="insurance">insurance:</label>
+        <input value="{{patient.insurance}}" class="form-input" id="insurance" name="insurance"></textarea>
+      </div>
+            <div class="form-group">
+        <label for="username">username:</label>
+        <input value="{{patient.username}}" class="form-input" id="username" name="username"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-signup">Update</button>
+      </div>
+    </form>
+  </div>
+
+
+<script src="/js/update.js"></script>
